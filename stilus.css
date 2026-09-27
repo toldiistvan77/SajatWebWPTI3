@@ -1,0 +1,724 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0b1020;
+    color: #E5E7EB;
+}
+
+
+/* fejléc */
+
+header {
+    width: 100%;
+    margin: 0;
+    padding: 60px 20px;
+    background-color: #070B16;
+    text-align: center;
+}
+
+header h1 {
+    color: #E5E7EB;
+    margin: 0 0 10px 0;
+}
+
+header h2 {
+    color: #94A3B8;
+    margin: 0;
+    font-weight: 400;
+}
+
+
+/* navigáció */
+
+nav {
+    background-color: #0F172A;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 12px 20px;
+}
+
+nav a {
+    display: block;
+    padding: 10px 16px;
+    color: #E5E7EB;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #070B16;
+    color: #38A1C9;
+    border-radius: 16px;
+}
+
+nav a.active {
+    background-color: #070B16;
+    color: #38A1C9;
+    border-radius: 16px;
+}
+
+#menuGomb {
+    display: none;
+}
+
+main {
+    padding: 0 20px;
+}
+
+
+/* bevezetés */
+
+#bevezetes {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 40px;
+    background-color: #111827;
+    border-radius: 12px;
+    border-left: 10px solid #38A1C9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+#bevezetes h2 {
+    color: #38A1C9;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+#bevezetes p {
+    color: #E5E7EB;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+
+/* idővonal */
+
+#idovonal {
+    max-width: 1100px;
+    margin: 100px auto;
+    position: relative;
+}
+
+#idovonal > h2 {
+    color: #38A1C9;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 70px;
+}
+
+#idovonal::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: #38A1C9;
+    transform: translateX(-50%);
+}
+
+#idovonal article {
+    width: 42%;
+    padding: 30px;
+    background-color: #111827;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    position: relative;
+    margin-bottom: 70px;
+}
+
+#idovonal article:nth-of-type(even) {
+    margin-left: auto;
+    border-right: 6px solid #38A1C9;
+}
+
+#idovonal article:nth-of-type(odd) {
+    margin-right: auto;
+    border-left: 6px solid #38A1C9;
+}
+
+#idovonal article::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    width: 16px;
+    height: 16px;
+    background-color: #38A1C9;
+    border-radius: 50%;
+}
+
+#idovonal article:nth-of-type(odd)::after {
+    right: -43px;
+}
+
+#idovonal article:nth-of-type(even)::after {
+    left: -43px;
+}
+
+#idovonal article h2 {
+    color: #38A1C9;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#idovonal article h3 {
+    color: #94A3B8;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+#idovonal article p {
+    color: #E5E7EB;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+#idovonal article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px 0 20px 0;
+}
+
+
+/* régen és most */
+
+#regmost {
+    max-width: 1100px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#regmost > h2 {
+    color: #38A1C9;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+#regmost article {
+    display: inline-block;
+    vertical-align: middle;
+    width: 42%;
+    padding: 30px;
+    background-color: #111827;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+#regmost article:first-of-type {
+    border-left: 6px solid #94A3B8;
+}
+
+#regmost article:last-of-type {
+    border-right: 6px solid #38A1C9;
+}
+
+#regmost article h3 {
+    color: #38A1C9;
+    font-size: 25px;
+    margin-top: 0;
+}
+
+#regmost article ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+#regmost article li {
+    color: #E5E7EB;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+#regmost article li:last-child {
+    margin-bottom: 0;
+}
+
+.vs {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px;
+    color: #38A1C9;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* hardver fejlődése */
+
+#technologia {
+    max-width: 1100px;
+    margin: 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#technologia > h2 {
+    width: 100%;
+    color: #38A1C9;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+#technologia article {
+    display: flex;
+    flex-direction: column;
+    width: 23%;
+    min-height: 260px;
+    padding: 25px;
+    background-color: #111827;
+    border-radius: 12px;
+    border-top: 5px solid #38A1C9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#technologia article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+#technologia article h3 {
+    color: #38A1C9;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+#technologia article p {
+    color: #E5E7EB;
+    line-height: 1.7;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* jövő */
+
+#jovo {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 50px;
+    background-color: #111827;
+    border-radius: 16px;
+    border: 1px solid #38A1C9;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#jovo h2 {
+    color: #38A1C9;
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+#jovo p {
+    color: #E5E7EB;
+    line-height: 1.8;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+#jovo p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* lábléc */
+
+footer {
+    margin-top: 120px;
+    padding: 50px 20px;
+    background-color: #070B16;
+    border-top: 2px solid #38A1C9;
+    text-align: center;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+}
+
+footer h2 {
+    color: #38A1C9;
+    font-size: 24px;
+    margin: 0 0 12px 0;
+}
+
+footer p {
+    color: #94A3B8;
+    margin: 0 0 25px 0;
+    font-size: 15px;
+}
+
+footer span {
+    color: #64748B;
+    font-size: 14px;
+}
+
+
+/* vissza a tetejére */
+
+#vissza {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #38A1C9;
+    color: #070B16;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#vissza:hover {
+    transform: translateY(-5px);
+}
+
+#vissza.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* tablet */
+
+@media (max-width: 900px) {
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    nav a {
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+
+    #bevezetes {
+        margin: 50px auto;
+        padding: 30px;
+    }
+
+    #idovonal {
+        margin: 70px auto;
+    }
+
+    #idovonal::before {
+        left: 20px;
+        transform: none;
+    }
+
+    #idovonal article {
+        width: calc(100% - 45px);
+        margin-left: 45px !important;
+        margin-right: 0 !important;
+    }
+
+    #idovonal article:nth-of-type(odd),
+    #idovonal article:nth-of-type(even) {
+        border-left: 6px solid #38A1C9;
+        border-right: none;
+    }
+
+    #idovonal article:nth-of-type(odd)::after,
+    #idovonal article:nth-of-type(even)::after {
+        left: -36px;
+        right: auto;
+    }
+
+    #regmost article {
+        display: block;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .vs {
+        display: block;
+        margin: 20px 0;
+    }
+
+    #technologia article {
+        width: 48%;
+    }
+}
+
+
+/* mobil */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 0 12px;
+    }
+
+    header {
+        padding: 45px 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header h2 {
+        font-size: 19px;
+    }
+
+
+    /* hamburgermenü */
+
+    nav {
+        padding: 8px 15px;
+    }
+
+    #menuGomb {
+        display: block;
+        margin-left: auto;
+        background: none;
+        border: none;
+        color: #38A1C9;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        padding: 10px 0;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav li {
+        width: 100%;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+
+    /* bevezetés */
+
+    #bevezetes {
+        margin: 40px auto;
+        padding: 25px 20px;
+        border-left: 6px solid #38A1C9;
+    }
+
+    #bevezetes h2 {
+        font-size: 27px;
+    }
+
+    #bevezetes p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    /* idővonal */
+
+    #idovonal {
+        margin: 60px auto;
+    }
+
+    #idovonal > h2 {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    #idovonal::before {
+        left: 15px;
+        width: 3px;
+    }
+
+    #idovonal article {
+        width: calc(100% - 35px);
+        margin-left: 35px !important;
+        padding: 22px;
+        margin-bottom: 45px;
+    }
+
+    #idovonal article::after {
+        width: 12px;
+        height: 12px;
+        top: 30px;
+    }
+
+    #idovonal article:nth-of-type(odd)::after,
+    #idovonal article:nth-of-type(even)::after {
+        left: -29px;
+    }
+
+    #idovonal article h2 {
+        font-size: 22px;
+    }
+
+    #idovonal article h3 {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    #idovonal article p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    #idovonal article img {
+        height: 200px;
+    }
+
+
+    /* régen és most */
+
+    #regmost {
+        margin: 70px auto;
+    }
+
+    #regmost > h2 {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    #regmost article {
+        padding: 25px 20px;
+    }
+
+    #regmost article h3 {
+        font-size: 22px;
+    }
+
+    #regmost article li {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+
+    .vs {
+        font-size: 21px;
+        margin: 15px 0;
+    }
+
+
+    /* hardver */
+
+    #technologia {
+        margin: 70px auto;
+    }
+
+    #technologia > h2 {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    #technologia article {
+        width: 100%;
+        min-height: auto;
+        margin-bottom: 20px;
+        padding: 22px;
+    }
+
+    #technologia article h3 {
+        font-size: 21px;
+    }
+
+    #technologia article p {
+        font-size: 15px;
+    }
+
+
+    /* jövő */
+
+    #jovo {
+        margin: 70px auto;
+        padding: 30px 20px;
+    }
+
+    #jovo h2 {
+        font-size: 30px;
+    }
+
+    #jovo p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+
+    /* lábléc */
+
+    footer {
+        margin-top: 80px;
+        padding: 40px 15px;
+    }
+
+
+    /* vissza a tetejére */
+
+    #vissza {
+        right: 15px;
+        bottom: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 21px;
+    }
+}
+
+
+/* nagyon kis kijelzők */
+
+@media (max-width: 380px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header h2 {
+        font-size: 17px;
+    }
+
+    #bevezetes h2,
+    #idovonal > h2,
+    #regmost > h2,
+    #technologia > h2,
+    #jovo h2 {
+        font-size: 26px;
+    }
+
+    #idovonal article {
+        padding: 18px;
+    }
+
+    #idovonal article img {
+        height: 170px;
+    }
+}
